@@ -30,8 +30,16 @@ const app = createApp({});
      app.component(path.split('/').pop().replace(/\.\w+$/, ''), definition.default);
 });
 
+/** Pacotes externos para auxílio nos projetos */
+
+/** Permissões do Laravel para Vue */
 import RolesPermissionsToVue from "../../vendor/geowrgetudor/laravel-spatie-permissions-vue/src/js";
 app.use(RolesPermissionsToVue);
+
+/** Sweet Alert 2 */
+import VueSweetalert2 from 'vue-sweetalert2';
+import 'sweetalert2/dist/sweetalert2.min.css';
+app.use(VueSweetalert2);
 
 /**
  * Finally, we will attach the application instance to a HTML element with

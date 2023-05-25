@@ -17,6 +17,7 @@
     },
     "dependencies": {
         "epic-spinners": "^2.0.0",
-        "laravel-vite-plugin": "^0.7.6"
+        "laravel-vite-plugin": "^0.7.6",
+        "vue-sweetalert2": "^5.0.5"
     }
 }

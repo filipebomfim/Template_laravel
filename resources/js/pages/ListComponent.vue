@@ -94,11 +94,21 @@ export default {
                         user_id: id
                     }
                 }).then(response =>{
-                    console.log(response.data)
+                    this.$swal.fire({
+                        position: 'top-end',
+                        icon: 'success',
+                        titleText: 'Sucesso!',
+                        text:'Permissão concedida ao usuário',
+                        showConfirmButton: false,
+                        timer: 3000,
+                        timerProgressBar:true,
+                        toast:true,
+                        showCloseButton:true,
+                    });
                 }).catch(error=>{
                     console.log(error.response.data)
                 })
-        }
+        },
     }
 }
 </script>

@@ -21,7 +21,14 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::prefix('v1')->middleware('jwt.auth')->group(function(){
     Route::post('me',[App\Http\Controllers\AuthController::class, 'me']);
     Route::post('logout',[App\Http\Controllers\AuthController::class, 'logout']);    
-    Route::get('users',[App\Http\Controllers\UserController::class, 'getAllUsers']);
+    Route::apiResource('permission',App\Http\Controllers\PermissionController::class);
+    Route::apiResource('role',App\Http\Controllers\RoleController::class);
+    Route::prefix('users')->group(function(){   
+        Route::get('/',[App\Http\Controllers\UserController::class, 'getAllUsers']);
+        Route::get('getUserRoles',[App\Http\Controllers\UserController::class, 'getUserRoles']);
+        Route::post('givePermission',[App\Http\Controllers\UserController::class, 'givePermission']);
+        
+    });
 });
 
 Route::post('login',[App\Http\Controllers\AuthController::class, 'login']);

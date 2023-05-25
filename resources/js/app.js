@@ -30,6 +30,9 @@ const app = createApp({});
      app.component(path.split('/').pop().replace(/\.\w+$/, ''), definition.default);
 });
 
+import RolesPermissionsToVue from "../../vendor/geowrgetudor/laravel-spatie-permissions-vue/src/js";
+app.use(RolesPermissionsToVue);
+
 /**
  * Finally, we will attach the application instance to a HTML element with
  * an "id" attribute of "app". This element is included with the "auth"

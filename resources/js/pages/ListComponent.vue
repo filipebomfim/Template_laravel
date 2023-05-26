@@ -34,8 +34,9 @@
                         />
                         </div> 
                     </div>
-                    <div class="card-body" v-else>                            
-                        <table class="table table-sm table-striped">
+                    <div class="card-body" v-else> 
+                        <div class="table-responsive">
+                            <DataTable class=" table-sm table-striped" >
                             <thead>
                                 <tr>
                                     <th scope="col">Nome</th>
@@ -50,7 +51,172 @@
                                     <td><button class="btn btn-success btn-rounded" @click="atribuirPermissao(user.id)">Permitir</button></td>
                                 </tr>
                             </tbody>
-                        </table>          
+                        </DataTable>
+                        </div>        
+                    </div>
+                </div>
+                <div class="card mt-3">
+                    <div class="card-header">Nova Tabela</div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table id="order-listing" class="table">
+                      <thead>
+                        <tr>
+                            <th>Order #</th>
+                            <th>Purchased On</th>
+                            <th>Customer</th>
+                            <th>Ship to</th>
+                            <th>Base Price</th>
+                            <th>Purchased Price</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>2012/08/03</td>
+                            <td>Edinburgh</td>
+                            <td>New York</td>
+                            <td>$1500</td>
+                            <td>$3200</td>
+                            <td>
+                              <label class="badge badge-info">On hold</label>
+                            </td>
+                            <td>
+                              <button class="btn btn-outline-primary">View</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>2015/04/01</td>
+                            <td>Doe</td>
+                            <td>Brazil</td>
+                            <td>$4500</td>
+                            <td>$7500</td>
+                            <td>
+                              <label class="badge badge-danger">Pending</label>
+                            </td>
+                            <td>
+                              <button class="btn btn-outline-primary">View</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>2010/11/21</td>
+                            <td>Sam</td>
+                            <td>Tokyo</td>
+                            <td>$2100</td>
+                            <td>$6300</td>
+                            <td>
+                              <label class="badge badge-success">Closed</label>
+                            </td>
+                            <td>
+                              <button class="btn btn-outline-primary">View</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>2016/01/12</td>
+                            <td>Sam</td>
+                            <td>Tokyo</td>
+                            <td>$2100</td>
+                            <td>$6300</td>
+                            <td>
+                              <label class="badge badge-success">Closed</label>
+                            </td>
+                            <td>
+                              <button class="btn btn-outline-primary">View</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>2017/12/28</td>
+                            <td>Sam</td>
+                            <td>Tokyo</td>
+                            <td>$2100</td>
+                            <td>$6300</td>
+                            <td>
+                              <label class="badge badge-success">Closed</label>
+                            </td>
+                            <td>
+                              <button class="btn btn-outline-primary">View</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>2000/10/30</td>
+                            <td>Sam</td>
+                            <td>Tokyo</td>
+                            <td>$2100</td>
+                            <td>$6300</td>
+                            <td>
+                              <label class="badge badge-info">On-hold</label>
+                            </td>
+                            <td>
+                              <button class="btn btn-outline-primary">View</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>2011/03/11</td>
+                            <td>Cris</td>
+                            <td>Tokyo</td>
+                            <td>$2100</td>
+                            <td>$6300</td>
+                            <td>
+                              <label class="badge badge-success">Closed</label>
+                            </td>
+                            <td>
+                              <button class="btn btn-outline-primary">View</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>2015/06/25</td>
+                            <td>Tim</td>
+                            <td>Italy</td>
+                            <td>$6300</td>
+                            <td>$2100</td>
+                            <td>
+                              <label class="badge badge-info">On-hold</label>
+                            </td>
+                            <td>
+                              <button class="btn btn-outline-primary">View</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>2016/11/12</td>
+                            <td>John</td>
+                            <td>Tokyo</td>
+                            <td>$2100</td>
+                            <td>$6300</td>
+                            <td>
+                              <label class="badge badge-success">Closed</label>
+                            </td>
+                            <td>
+                              <button class="btn btn-outline-primary">View</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>2003/12/26</td>
+                            <td>Tom</td>
+                            <td>Germany</td>
+                            <td>$1100</td>
+                            <td>$2300</td>
+                            <td>
+                              <label class="badge badge-danger">Pending</label>
+                            </td>
+                            <td>
+                              <button class="btn btn-outline-primary">View</button>
+                            </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                        </div>
+                        
                     </div>
                 </div>
             </div>
@@ -59,18 +225,25 @@
 </template>
 
 <script>
-import {LoopingRhombusesSpinner} from 'epic-spinners' 
+import {LoopingRhombusesSpinner} from 'epic-spinners'
+import DataTable from 'datatables.net-vue3'
+import DataTablesStyle from 'datatables.net-bs5'
+import DataTableResponsive from 'datatables.net-responsive-bs5'
+ 
+DataTable.use(DataTablesStyle)
+DataTable.use(DataTableResponsive)
+
 export default {
     components: {
-        LoopingRhombusesSpinner
+        LoopingRhombusesSpinner, DataTable
     },
     mounted(){                
-        this.listUsers()         
+        this.listUsers()
     },
     data(){
         return{
             users:[],
-            loading:false
+            loading:false,
         }
     },
     methods:{
@@ -114,5 +287,6 @@ export default {
 </script>
 
 <style>
-
+@import 'bootstrap';
+@import 'datatables.net-bs5';
 </style>

@@ -12,6 +12,8 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
+    <link rel="stylesheet" href="{{asset('css/dataTables.bootstrap4.css')}}">
+
 
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
@@ -79,7 +81,10 @@
 
     <script type="text/javascript">
         window.vueSpatiePermissions = {!! auth()->check() ? auth()->user()->getRolesPermissionsAsJson() : 0 !!}
-      </script>
-      
+      </script> 
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="{{asset('js/jquery.dataTables.js')}}"></script>
+      <script src="{{asset('js/dataTables.bootstrap4.js')}}"></script>
+      <script src="{{asset('js/data-table.js')}}"></script>
 </body>
 </html>

@@ -41,6 +41,7 @@
                                 <tr>
                                     <th scope="col">Nome</th>
                                     <th scope="col">Email</th>
+                                    <th scope="col">Criado em</th>
                                     <th scope="col">Permitir Ver Usuários</th>
                                 </tr>
                             </thead>
@@ -48,6 +49,7 @@
                                 <tr v-for="user in users" :key="user.id">
                                     <td>{{user.name}}</td>
                                     <td>{{ user.email }}</td>
+                                    <td>{{ user.created_at }}</td>
                                     <td><button class="btn btn-success btn-rounded" @click="atribuirPermissao(user.id)">Permitir</button></td>
                                 </tr>
                             </tbody>
@@ -254,7 +256,7 @@ export default {
                     method: 'GET',
                     url:'/api/v1/users'
                 }).then(response =>{
-                    this.users = response.data.users
+                    this.users = response.data.data
                     this.loading = false
                 })
             },1000)                        
